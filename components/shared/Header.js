@@ -1,54 +1,69 @@
 import React from 'react';
 import Link from 'next/link';
-import {Link as NextLink} from '../../routes'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
 
-import '../../styles/main.scss';
+const BsNavLink = (props) => {
+  const {route, title} = props;
 
-class Header extends React.Component {
-    render(){
-        const title = this.props.title;
-
-        return(
-            <React.Fragment>
-                <p>{title}</p>
-                {this.props.children}
-                <p className="customClass">I am styled P element</p>
-                <p className="customClassFromFile">I am styled P element</p>
-                <Link href="/">
-                <a style={{'fontSize': '20px'}}>Strona Domowa</a>
-                </Link>
-                <Link href="/about">
-                    <a>O mnie</a>
-                </Link>
-                <Link href="/portfolios">
-                    <a>Porfolio</a>
-                </Link>
-                <Link href="/blogs">
-                    <a>Blog</a>
-                </Link>
-                <Link href="/cv">
-                    <a>CV</a>
-                </Link>
-                <NextLink  route='test' params={{id: '2'}}>
-                    Test 2
-                </NextLink>
-                <NextLink  route='/test/5'>
-                    Test 5
-                </NextLink>
-                <style jsx>{`
-
-                    a {
-                        font-size: 20px;
-                    };
-                    .customClass {
-                        color: red;
-                    }
-
-                `}
-                </style>
-            </React.Fragment>
-        )
-    }
+  return (
+    <Link href={route}>
+      <a className="nav-link port-navbar-link">{title}</a>
+    </Link>
+  )
 }
 
-export default Header;
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render(){
+    return (
+      <div>
+        <Navbar className="port-navbar port-default absolute" color="transparent" dark expand="md">
+          <NavbarBrand className="port-navbar-brand" href="/">Michał Latos</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem className="port-navbar-item">
+                <BsNavLink route="/" title="Strona domowa" />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <BsNavLink route="/about" title="O mnie" />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <BsNavLink route="/portfolios" title="Portfolio" />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <BsNavLink route="/blogs" title="Blog" />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <BsNavLink route="/cv" title="CV" />
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
+
+
