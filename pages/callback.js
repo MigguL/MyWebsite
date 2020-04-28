@@ -1,7 +1,8 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage'
-class Cv extends React.Component{
+
+class Callback extends React.Component{
 
 
     render() {
@@ -9,7 +10,7 @@ class Cv extends React.Component{
           return (
             <BaseLayout>
               <BasePage>
-                <h1>I am CV Page</h1>
+                <h1>Verifying login data...</h1>
               </BasePage>
             </BaseLayout>
           )
@@ -17,4 +18,4 @@ class Cv extends React.Component{
     }
   }
 
-export default Cv;
+export default Callback;

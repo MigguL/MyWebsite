@@ -10,6 +10,8 @@ import {
   NavLink
 } from 'reactstrap';
 
+import auth0 from '../../services/auth0';
+
 const BsNavLink = (props) => {
   const {route, title} = props;
 
@@ -20,7 +22,23 @@ const BsNavLink = (props) => {
   )
 }
 
-export default class Example extends React.Component {
+const Login = () => {
+  return (
+    <span onClick={auth0.login} className="nav-link port-navbar-link clickable">
+      Login
+    </span>
+  )
+}
+
+const Logout = () => {
+  return (
+    <span onClick={auth0.logout} className="nav-link port-navbar-link clickable">
+      Logout
+    </span>
+  )
+}
+
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,10 +61,10 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="port-navbar-item">
-                <BsNavLink route="/" title="Strona domowa" />
+                <BsNavLink route="/" title="Home" />
               </NavItem>
               <NavItem className="port-navbar-item">
-                <BsNavLink route="/about" title="O mnie" />
+                <BsNavLink route="/about" title="About" />
               </NavItem>
               <NavItem className="port-navbar-item">
                 <BsNavLink route="/portfolios" title="Portfolio" />
@@ -56,6 +74,12 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem className="port-navbar-item">
                 <BsNavLink route="/cv" title="CV" />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <Login />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <Logout />
               </NavItem>
             </Nav>
           </Collapse>
