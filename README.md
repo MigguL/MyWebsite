@@ -1,2 +1,0 @@
-# MyWebsite
-Internet Languages Project
