@@ -24,7 +24,7 @@ class Portfolio extends React.Component{
           const {post} = this.props;
 
           return (
-            <BaseLayout>
+            <BaseLayout {...this.props.auth}>
               <BasePage>
                 <h1>{post.title}</h1>
                 <h2>{post.body}</h2>
