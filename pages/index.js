@@ -8,13 +8,15 @@ class Index extends React.Component{
   constructor(props) {
     super(props);
 
-    this.roles =['IT Student', 'Football Lover', 'Powered by Typed.js']
+    this.roles =['IT Student', 'Football Lover', 'Typed.js']
   }
 
   render() {
+      const { isAuthenticated, user } = this.props.auth;
+
 
         return (
-          <BaseLayout className="cover" {...this.props.auth}>
+          <BaseLayout className="cover" {...this.props.auth} headerType="index">
           <div className="main-section">
           <Container>
             <Row>
@@ -37,8 +39,9 @@ class Index extends React.Component{
               <Col md="6" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
+                  { isAuthenticated && <span> <b> {user.name} </b> </span> }
                     Welcome to my portfolio website.<br/>
-                    Nam pretium libero id elit suscipit egestas.
+                    Nam pretium libero.
                   </h1>
                 </div>
 
