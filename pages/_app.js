@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import auth0 from '../services/auth0';
 
 // Stylings
@@ -28,9 +28,7 @@ export default class MyApp extends App {
     const { Component, pageProps, auth } = this.props
 
     return (
-      <Container>
         <Component {...pageProps} auth={auth}/>
-      </Container>
     )
   }
 }

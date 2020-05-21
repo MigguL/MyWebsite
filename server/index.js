@@ -25,7 +25,7 @@ const secretData = [
   }
 ]
 
-mongoose.connect(config.DB_URI, { useNewUrlParser: true})
+mongoose.connect(config.DB_URI, { useUnifiedTopology: true, useNewUrlParser: true})
   .then(() => console.log('Database Connected!'))
   .catch(err => console.error(err));
 
