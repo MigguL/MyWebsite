@@ -5,6 +5,7 @@ import auth0 from '../services/auth0';
 // Stylings
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
+import "react-datepicker/dist/react-datepicker.css";
 
 const namespace = 'http://localhost:3000'
 
