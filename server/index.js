@@ -13,6 +13,7 @@ const handle = routes.getRequestHandler(app);
 const config = require('./config');
 const bodyParser = require('body-parser');
 const portfolioRoutes = require('./routes/portfolio');
+const blogRoutes = require('./routes/blog');
 
 const secretData = [
   {
@@ -35,6 +36,7 @@ app.prepare()
   server.use(bodyParser.json());
 
   server.use('/api/v1/portfolios', portfolioRoutes);
+  server.use('/api/v1/blogs', blogRoutes);
 
   server.get('/api/v1/secret', authService.checkJWT, (req, res) => {
     return res.json(secretData);

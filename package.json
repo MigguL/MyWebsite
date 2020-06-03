@@ -49,7 +49,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "slate": "^0.44.13",
-    "slate-html-serializer": "^0.7.30",
+    "slate-html-serializer": "^0.7.39",
     "slate-react": "^0.21.24",
     "slugify": "^1.3.3",
     "style-loader": "^1.1.4"

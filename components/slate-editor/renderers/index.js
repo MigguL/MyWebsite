@@ -3,7 +3,6 @@ import { Button, Icon } from '../components';
 const DEFAULT_NODE = 'paragraph'
 
 function onClickMark(event, type, editor) {
-  debugger;
   event.preventDefault()
   editor.toggleMark(type)
 }
@@ -97,7 +96,6 @@ export const renderBlockButton = (type, icon, editor) => {
 export const renderNode = (props, editor, next) => {
   const { attributes, children, node } = props
 
-  debugger;
   switch (node.type) {
     case 'paragraph':
       return <p {...attributes}>{children}</p>
@@ -121,7 +119,6 @@ export const renderNode = (props, editor, next) => {
 
 export const renderMark = (props, editor, next) => {
   const { children, mark, attributes } = props
-  debugger;
 
   switch (mark.type) {
     case 'bold':
