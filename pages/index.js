@@ -8,11 +8,32 @@ class Index extends React.Component{
   constructor(props) {
     super(props);
 
+    this.state = {
+      isFlipping: false
+    }
+
     this.roles =['IT Student', 'Football Lover', 'Typed.js']
+  }
+
+  componentDidMount() {
+    this.animateCard();
+  }
+
+  componentWillUnmount(){
+    this.cardAnimationInterval && clearInterval(this.cardAnimationInterval)
+  }
+
+  animateCard() {
+    this.cardAnimationInterval = setInterval(() => {
+      this.setState({
+        isFlipping: !this.state.isFlipping
+      });
+    }, 5000)
   }
 
   render() {
       const { isAuthenticated, user } = this.props.auth;
+      const { isFlipping } = this.state;
 
 
         return (
@@ -22,18 +43,22 @@ class Index extends React.Component{
             <Row>
               <Col md="6">
                 <div className="hero-section">
-                  <div className="hero-section-content">
-                    <h2>Web Developer </h2>
-                    <div className="hero-section-content-intro">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nam pretium libero id elit egestas.<br/>
-                      <a href="http://www.freepik.com">Designed by katemangostar / Freepik</a>
+                  <div className={`flipper ${isFlipping ? 'isFlipping' : ''}`}>
+                    <div className="back">
+                      <div className="hero-section-content">
+                        <h2>Web Developer </h2>
+                        <div className="hero-section-content-intro">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Nam pretium libero id elit egestas.<br/>
+                          <a href="http://www.freepik.com">Designed by katemangostar / Freepik</a>
+                          </div>
+                        </div>
+                        <img className="image" src="/static/images/section-1.png"/>
+                        <div className="shadow-custom">
+                        <div className="shadow-inner"> </div>
+                      </div>
                     </div>
                   </div>
-                    <img className="image" src="/static/images/section-1.png"/>
-                    <div className="shadow-custom">
-                      <div className="shadow-inner"> </div>
-                    </div>
                 </div>
               </Col>
               <Col md="6" className="hero-welcome-wrapper">

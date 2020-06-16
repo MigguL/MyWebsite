@@ -87,6 +87,8 @@
   @media (max-width: 991px) {
     .hero-section {
       width: 341px;
+      height: 445px;
+
       &-content {
         width: 341px;
        
@@ -112,6 +114,19 @@
       box-shadow: -17px 13px 13px rgba(0,0,0,0.09);
     }
   }
+
+  .flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .flipper.isFlipping {
+    transform: rotateY(-360deg);
+  }
   
+  .back {
+    transform: rotateY(0deg);
+  }
  
   

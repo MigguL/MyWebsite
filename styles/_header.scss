@@ -35,11 +35,32 @@
       }
     }
   }
-}
 
+  .port-dropdown-menu {
+
+    .port-dropdown-item {
+      color: #4e4e4e;
+
+      &.active {
+        color: #dba919;
+      }
+    }
+
+    .port-dropdown-toggle {
+      color: white;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+}
 
   // --------- DEFAULT HEADER -------------
   .port-navbar.port-nav-base.port-nav-default {
     padding: 30px;
     background-color: $secondary !important;
+  }
+
+  .bg-transparent.menu-open {
+    transition: 1s;
   }
