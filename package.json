@@ -46,7 +46,7 @@
     "react-toastify": "^4.4.3",
     "react-typed": "^1.2.0",
     "reactstrap": "^8.8.0",
-    "sass": "^1.26.5",
+    "sass": "^1.30.0",
     "sass-loader": "^8.0.2",
     "slate": "^0.44.13",
     "slate-html-serializer": "^0.7.39",
