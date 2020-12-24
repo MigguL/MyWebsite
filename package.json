@@ -45,7 +45,7 @@
     "react-router-dom": "^5.2.0",
     "react-toastify": "^4.4.3",
     "react-typed": "^1.2.0",
-    "reactstrap": "^6.5.0",
+    "reactstrap": "^8.8.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "slate": "^0.44.13",
