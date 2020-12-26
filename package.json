@@ -56,6 +56,6 @@
     "toastify": "^2.0.1"
   },
   "devDependencies": {
-    "sass-resources-loader": "^2.0.3"
+    "sass-resources-loader": "^2.1.1"
   }
 }
