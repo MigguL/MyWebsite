@@ -51,7 +51,7 @@
     "slate": "^0.44.13",
     "slate-html-serializer": "^0.8.13",
     "slate-react": "^0.21.24",
-    "slugify": "^1.4.0",
+    "slugify": "^1.4.6",
     "style-loader": "^2.0.0",
     "toastify": "^2.0.1"
   },
