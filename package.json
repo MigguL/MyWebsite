@@ -38,7 +38,7 @@
     "next-routes": "^1.4.2",
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-datepicker": "^3.3.0",
     "react-dom": "^16.13.1",
     "react-emotion": "^9.2.12",
