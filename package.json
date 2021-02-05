@@ -43,7 +43,7 @@
     "react-dom": "^16.13.1",
     "react-emotion": "^10.0.0",
     "react-router-dom": "^5.2.0",
-    "react-toastify": "^6.2.0",
+    "react-toastify": "^7.0.2",
     "react-typed": "^1.2.0",
     "reactstrap": "^8.8.0",
     "sass": "^1.30.0",
