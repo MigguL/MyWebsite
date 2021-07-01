@@ -52,7 +52,7 @@
     "slate-html-serializer": "^0.8.13",
     "slate-react": "^0.22.10",
     "slugify": "^1.4.6",
-    "style-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
     "toastify": "^2.0.1"
   },
   "devDependencies": {
