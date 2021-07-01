@@ -47,7 +47,7 @@
     "react-typed": "^1.2.0",
     "reactstrap": "^8.8.0",
     "sass": "^1.30.0",
-    "sass-loader": "^11.1.1",
+    "sass-loader": "^12.1.0",
     "slate": "^0.47.9",
     "slate-html-serializer": "^0.8.13",
     "slate-react": "^0.22.10",
